@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Microservices Demo - Frontend</title>
+  </head>
+  <body>
+    <h1>Hello from the Frontend Service!</h1>
+    <p>This is a simple HTML page served by the frontend service.</p>
+
+    <div id="backend-response"></div>
+
+    <script>
+      // Fetch data from the backend service
+      fetch("http://localhost:3000") // Note: 'backend' is used as the hostname to reach the backend service
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById(
+            "backend-response"
+          ).innerText = `Response from Backend: ${data}`;
+        })
+        .catch((error) => console.error("Error fetching data:", error));
+    </script>
+  </body>
+</html>
