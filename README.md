@@ -47,3 +47,11 @@ cd frontend
 docker build -t demo-microservices-app-frontend:latest .
 docker run -d -p 80:80 demo-microservices-app-frontend:latest
 ```
+## Stop micro service 
+```
+sh 'docker stop $(docker ps -q --filter ancestor=frontend:latest)'
+sh 'docker stop $(docker ps -q --filter ancestor=backend:latest)'
+sh 'docker rm $(docker ps -a -q --filter ancestor=frontend:latest)'
+sh 'docker rm $(docker ps -a -q --filter ancestor=backend:latest)'
+
+```
