@@ -26,9 +26,9 @@ In summary, the Node.js microservice in this example serves as a representation 
 
 Usage:
 
-Ensure you have Docker, Jenkins, and an EC2 instance with Ubuntu 20.04 installed and configured.
-Create a new pipeline job in Jenkins and configure it to use the Jenkinsfile in your repository.
-When the Jenkins pipeline runs, it will build Docker images for the web server and microservice and deploy them on your EC2 instance.
+- Ensure you have Docker, Jenkins, and an EC2 instance with Ubuntu 20.04 installed and configured.
+- Create a new pipeline job in Jenkins and configure it to use the Jenkinsfile in your repository.
+- When the Jenkins pipeline runs, it will build Docker images for the web server and microservice and deploy them on your EC2 instance.
 
 This is a minimal example for demonstration purposes, and you may need to adapt it based on your specific requirements and security considerations, especially regarding Docker deployment on EC2.
 
